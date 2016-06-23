@@ -2,7 +2,6 @@ package model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import model.util.UserUtil;
 
 /**
  * Created by wzp on 16-6-23.
