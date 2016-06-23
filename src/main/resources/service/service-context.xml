@@ -22,6 +22,7 @@
 
 
 	<bean id="swagger2Feature" class="org.apache.cxf.jaxrs.swagger.Swagger2Feature">
+		<property name="basePath" value="/practice/v1"/>
 	</bean>
 
 	<cxf:bus>
