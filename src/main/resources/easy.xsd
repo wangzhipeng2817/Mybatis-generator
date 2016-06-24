@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.wzp.com"
+            xmlns="http://www.wzp.com">
+
+    <xsd:element name="content">
+        <xsd:annotation>
+            <xsd:documentation>
+                this is root element
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="bean"/>
+            </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="bean">
+        <xsd:annotation>
+            <xsd:documentation>
+                this is bean content
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    the child tags and the attribute that bean tag contains
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:group ref="beanElements"/>
+            <xsd:attributeGroup ref="beanAttributes"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:group name="beanElements">
+        <xsd:sequence>
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="property"/>
+                <xsd:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:choice>
+        </xsd:sequence>
+    </xsd:group>
+
+    <xsd:attributeGroup name="beanAttributes">
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="class" type="xsd:string"/>
+        <xsd:attribute name="isSingleton" type="xsd:boolean"/>
+        <xsd:attribute name="init-method" type="xsd:string"/>
+    </xsd:attributeGroup>
+
+    <xsd:element name="property">
+        <xsd:annotation>
+            <xsd:documentation>
+                this is bean content
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:annotation>
+                <xsd:documentation>
+                    the attribute that bean tag contains
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:attribute name="name" type="xsd:string"/>
+            <xsd:attribute name="value" type="xsd:string"/>
+            <xsd:attribute name="ref" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+
+
+
+
+
+</xsd:schema>
