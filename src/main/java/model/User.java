@@ -13,7 +13,9 @@ public class User {
     @ApiModelProperty(value = "密码", example = "123")
     private String password;
     @ApiModelProperty(value = "年龄")
-    private Integer Age;
+    private Integer age;
+
+    private String address;
 
     public String getUserName() {
         return userName;
@@ -32,15 +34,16 @@ public class User {
     }
 
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(Integer age) {
-        Age = age;
+        this.age = age;
     }
 
     @Override
     public String toString() {
+        System.out.println("I am change");
         StringBuilder builder = new StringBuilder();
         builder.append("   用户名:").append(this.getUserName());
         builder.append("   密码:").append(this.getPassword());
