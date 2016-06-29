@@ -45,7 +45,7 @@ public class User {
 
     @Override
     public String toString() {
-        System.out.println("I am change");
+        System.out.println("I am stand");
         StringBuilder builder = new StringBuilder();
         builder.append("   用户名:").append(this.getUserName());
         builder.append("   密码:").append(this.getPassword());
