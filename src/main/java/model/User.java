@@ -2,10 +2,12 @@ package model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import springLearn.model.annotation.Base;
 
 /**
  * Created by wzp on 16-6-23.
  */
+@Base(value = "user")
 @ApiModel(value = "用户模型")
 public class User {
     @ApiModelProperty(value = "用户名", example = "wzp", required = true)
