@@ -9,6 +9,4 @@
 
     <import resource="service/service-context.xml"/>
 
-    <bean id="temp" class="springLearn.model.target.UserTarget">
-    </bean>
 </beans>
