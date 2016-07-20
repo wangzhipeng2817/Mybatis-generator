@@ -12,7 +12,8 @@ import service.UserService;
  * Created by wzp on 16-6-27.
  */
 public class ClientTest extends TestSupport {
-    public static void main(String[] args) {
-        System.out.println("test");
+    @Test
+    public void easyTest(){
+        System.out.println("for the jenkins");
     }
 }
