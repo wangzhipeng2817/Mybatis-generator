@@ -12,15 +12,7 @@ import service.UserService;
  * Created by wzp on 16-6-27.
  */
 public class ClientTest extends TestSupport {
-
-    @Autowired
-    UserService service;
-
-    @Test
-    public void regist(){
-        service.toString();
-        UserClient client = new UserClient("localhost",8080);
-        String result = client.registService("wzp");
-        Assert.assertEquals(result,"success");
+    public static void main(String[] args) {
+        System.out.println("test");
     }
 }
